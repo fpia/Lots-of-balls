@@ -27,27 +27,26 @@ float[] diam = new float [count];
 void setup() {
   //set size of canvas
   size(800, 600);
-
+for(int i = 0; i<count; i++){
   //initialize variables
-  int i = 0;
-  while(i<count){
   x[i]= random(width);
   y[i]= random(height);
   diam[i] = random(5,100);
   velX[i] = random(-5, 5);
   velY[i] = random(-5, 5);
-  i++;
-  }
 
+  }
 }
+
+
 
 void draw() {
   //draw background to cover previous frame
   background(0);
-int i = 0;
+for(int i = 0; i<count; i++){
   //draw ball
-  while( i<count){
   ellipse(x[i], y[i], diam[i], diam[i]);
+ 
 
   //draw another ball
   //ellipse(a,z, diam, diam);
@@ -67,7 +66,6 @@ int i = 0;
     velY[i] = abs(velY[i]);
   }
   
-  i++;
   
 }
 }
